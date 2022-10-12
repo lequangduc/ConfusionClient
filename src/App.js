@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./components/MenuComponents";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 import { DISHES } from "./shared/dishes";
 import Main from "./components/MainComponent";
 class App extends Component {
@@ -22,9 +23,11 @@ class App extends Component {
       //   </Navbar>
       //   <Menu dishes={this.state.dishes} />
       // </div>
-      <div className="App">
-        <Main />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -8,6 +8,10 @@ import DishDetail from "./DishdetailComponent";
 
 import { DISHES } from "../shared/dishes";
 
+import Home from "./HomeComponent";
+
+import { Switch, Route, Redirect } from "react-router-dom";
+
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 // import { Jumbotron } from "reactstrap";
@@ -23,21 +27,15 @@ class Main extends Component {
     };
   }
 
-  onDishSelect(dishId) {
-    this.setState({ selectedDish: dishId });
-  }
+  // onDishSelect(dishId) {
+  //   this.setState({ selectedDish: dishId });
+  // }
 
   render() {
     return (
       <div>
-        {/* <Navbar dark color="primary">
-          <div className="">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar> */}
-        {/* <Jumbotron dark color="primary"></Jumbotron> */}
         <Header />
-        <div className="container">
+        {/* <div className="container">
           <Menu
             dishes={this.state.dishes}
             onClick={(dishId) => this.onDishSelect(dishId)}
@@ -50,7 +48,17 @@ class Main extends Component {
               )[0]
             }
           />
-        </div>
+        </div> */}
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route
+            exact
+            path="/menu"
+            component={() => <Menu dishes={this.state.dishes} />}
+          />
+          <Redirect to="/home" />
+        </Switch>
+
         <Footer />
       </div>
     );

@@ -69,9 +69,9 @@ const Menu = (props) => {
   });
 
   return (
-    // <div className="container">
-    <div className="row">{menu}</div>
-    // </div>
+    <div className="container">
+      <div className="row">{menu}</div>
+    </div>
   );
 };
 
