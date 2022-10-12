@@ -8,6 +8,8 @@ import DishDetail from "./DishdetailComponent";
 
 import { DISHES } from "../shared/dishes";
 
+import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
 // import { Jumbotron } from "reactstrap";
 
 class Main extends Component {
@@ -28,12 +30,13 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Navbar dark color="primary">
+        {/* <Navbar dark color="primary">
           <div className="">
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
           </div>
-        </Navbar>
+        </Navbar> */}
         {/* <Jumbotron dark color="primary"></Jumbotron> */}
+        <Header />
         <div className="container">
           <Menu
             dishes={this.state.dishes}
@@ -48,6 +51,7 @@ class Main extends Component {
             }
           />
         </div>
+        <Footer />
       </div>
     );
   }
