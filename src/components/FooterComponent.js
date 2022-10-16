@@ -22,7 +22,7 @@ function Footer(props) {
               </li>
 
               <li>
-                <Link to="contactus">Contact</Link>
+                <Link to="/contactus">Contact</Link>
               </li>
             </ul>
           </div>
