@@ -9,8 +9,8 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-function About(props) {
-  const leaders = props.leaders.map((leader) => {
+function About({ list }) {
+  const leaders = list.map((leader) => {
     return renderLeader(leader);
   });
 

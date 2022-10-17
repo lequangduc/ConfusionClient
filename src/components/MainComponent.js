@@ -65,7 +65,7 @@ class Main extends Component {
       );
     };
     const AboutPage = () => {
-      return <About leaders={this.state.leaders} />;
+      return <About list={this.state.leaders} />;
     };
     return (
       <div>
