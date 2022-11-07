@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 import { Loading } from "./LoadingComponent";
 import { LocalForm, Control, Errors } from "react-redux-form";
+import { baseUrl } from "../shared/baseUrl";
 
 import { Link } from "react-router-dom";
 const required = (val) => val && val.length;
@@ -136,7 +137,7 @@ function RenderDish({ dish }) {
   if (dish != null) {
     return (
       <Card>
-        <CardImg width="100%" src={dish.image} alt={dish.name} />
+        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
